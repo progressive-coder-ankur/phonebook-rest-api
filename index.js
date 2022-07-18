@@ -18,7 +18,7 @@ app.use(
   morgan(':method :url :status :res[content-length] - :response-time ms ')
 )
 
-app.get('/info', (request, response) => {
+app.get('/info', (response) => {
   response.send(
     `<p className='info-title'>Phonebook has info about ${
       Person.length

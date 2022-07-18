@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: 'eslint:recommended',
   parserOptions: {
-    ecmaVersion: 'latest',
+    ' ecmaVersion': 'latest',
   },
   rules: {
     indent: ['error', 2],
@@ -14,5 +14,9 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     eqeqeq: 'error',
+    'no-trailing-spaces': 'error',
+    'object-curly-spacing': ['error', 'always'],
+    'arrow-spacing': ['error', { before: true, after: true }],
+    'no-console': 0,
   },
 }
