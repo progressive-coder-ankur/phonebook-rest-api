@@ -17,6 +17,10 @@ const personSchema = new mongoose.Schema({
     },
     required: [true, 'Person Number is required'],
   },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
 })
 
 personSchema.set('toJSON', {
@@ -27,4 +31,6 @@ personSchema.set('toJSON', {
   },
 })
 
-module.exports = mongoose.model('Person', personSchema)
+const Person = mongoose.model('Person', personSchema)
+
+module.exports = Person
